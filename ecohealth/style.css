@@ -1,0 +1,906 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #d1cece;
+
+    min-height: 100vh;
+}
+
+/* CENTRALIZAR APENAS LOGIN E CADASTRO */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+header {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background: #148845;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #2ecc71;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ddd;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf9f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #2ecc71;
+    border-radius: 5px;
+}
+
+li button {
+    margin-top: 5px;
+    background: #e74c3c;
+}
+#map {
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+}.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ecf9f1;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #2ecc71;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}.filtros {
+    margin: 20px;
+    text-align: center;
+}
+
+.filtros button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filtros button:hover {
+    background: #27ae60;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ecf9f1;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #2ecc71;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}.expansivel {
+    cursor: pointer;
+    background: #dff5e7;
+    font-weight: bold;
+    text-align: center;
+}
+
+.expansivel:hover {
+    background: #c8f0d8;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.stat-card {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: #2ecc71;
+    top: 0;
+    left: 0;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.stat-card h3 {
+    font-size: 42px;
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: #555;
+    font-size: 18px;
+}
+.preview-container {
+    margin-top: 15px;
+}
+
+#preview {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.popup-img {
+    width: 220px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#themeToggle {
+    background: #2ecc71;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    color: white;
+    margin-left: 15px;
+}
+
+#themeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================
+   DARK MODE
+========================== */
+
+body.dark {
+    background: #121212;
+    color: #f1f1f1;
+}
+
+/* NAV */
+
+body.dark nav {
+    background: #1e1e1e;
+}
+
+/* SECTIONS */
+
+body.dark section {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* ÁREAS TRANSPARENTES */
+
+body.dark .dashboard,
+body.dark .grafico-section,
+body.dark .busca-section,
+body.dark .form-section,
+body.dark .cards-container,
+body.dark .agentes-section,
+body.dark .conscientizacao,
+body.dark .topo-problemas {
+    background: transparent;
+}
+
+/* CARDS */
+
+body.dark .card,
+body.dark .stat-card {
+    background: #1f1f1f;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* TEXTOS */
+
+body.dark .card p,
+body.dark .stat-card p,
+body.dark li {
+    color: #d0d0d0;
+}
+
+/* TÍTULOS */
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+    color: #2ecc71;
+}
+
+/* INPUTS */
+
+body.dark input,
+body.dark textarea {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+/* BOTÕES */
+
+body.dark button {
+    background: #27ae60;
+}
+
+/* FOOTER */
+
+body.dark footer {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* SCROLL SUAVE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* TRANSIÇÃO */
+
+body {
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+/* GRÁFICO */
+
+.grafico-section {
+    padding: 20px;
+}
+
+.grafico-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+body.dark .grafico-container {
+    background: #1f1f1f;
+}
+
+/* BUSCA */
+
+.busca-section {
+    padding: 20px;
+}
+
+.busca-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.busca-container input {
+    flex: 1;
+    min-width: 250px;
+}
+
+.busca-container button {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.busca-container button:hover {
+    transform: scale(1.03);
+}
+/* ==========================
+   RESPONSIVIDADE MOBILE
+========================== */
+
+@media (max-width: 900px) {
+
+    /* NAV */
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-left,
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a,
+    #themeToggle {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* HERO */
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* DASHBOARD */
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    /* GRID */
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FORM */
+
+    form {
+        width: 100%;
+    }
+
+    input,
+    textarea,
+    button {
+        width: 100%;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    /* MAPA */
+
+    #map {
+        height: 400px;
+    }
+
+    /* BUSCA */
+
+    .busca-container {
+        flex-direction: column;
+    }
+
+    .busca-container input,
+    .busca-container button {
+        width: 100%;
+    }
+
+    /* GRÁFICO */
+
+    .grafico-container {
+        overflow-x: auto;
+    }
+
+    /* IMAGEM POPUP */
+
+    .popup-img {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+/* ==========================
+   TOAST / ALERTAS
+========================== */
+
+#toast {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    background: #2ecc71;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    font-weight: bold;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-20px);
+
+    transition: 0.4s;
+
+    z-index: 9999;
+}
+
+#toast.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+body.dark #toast {
+
+    background: #27ae60;
+}
+/* ==========================
+   TRANSIÇÃO DE PÁGINA
+========================== */
+
+body {
+
+    opacity: 0;
+
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SAÍDA */
+
+.fade-out {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition: 0.4s;
+}
+/* ==========================
+   TRANSIÇÃO ENTRE PÁGINAS
+========================== */
+
+body {
+
+    opacity: 0;
+
+    animation: fadeIn 0.45s ease forwards;
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-out {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+/* ==========================
+   FUNDO GERAL
+========================== */
+
+body {
+    background: #d1cece !important;
+}
+
+body.dark {
+    background: #121212 !important;
+}
+
+/* REMOVE VERDE DAS PÁGINAS */
+
+section,
+.cards-container,
+.agentes-section,
+.conscientizacao,
+.topo-problemas,
+.grafico-container {
+
+    background: white;
+}
+
+/* DARK MODE */
+
+body.dark section,
+body.dark .cards-container,
+body.dark .agentes-section,
+body.dark .conscientizacao,
+body.dark .topo-problemas,
+body.dark .grafico-container {
+
+    background: #1a1a1a;
+}
+/* ==========================
+   ANIMAÇÃO EXPANSÍVEL
+========================== */
+
+#problemasConteudo,
+#agentesConteudo {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+/* QUANDO ABRIR */
+
+.mostrar {
+
+    opacity: 1 !important;
+
+    transform: translateY(0) !important;
+}
+
+/* ==========================
+   ANIMAÇÃO CONSCIENTIZAÇÃO
+========================== */
+
+#conscientizacaoConteudo {
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+/* ==========================
+   DARK MODE - TECNOLOGIAS
+========================== */
+
+body.dark ul li {
+
+    background: #1f1f1f;
+
+    color: white;
+
+    border-left: 5px solid #2ecc71;
+}
+/* ==========================
+   FOOTER MODERNO
+========================== */
+
+.footer {
+
+    background: #111;
+
+    color: white;
+
+    margin-top: 50px;
+
+    padding-top: 40px;
+}
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    padding: 0 40px 40px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+
+    color: #2ecc71;
+
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+
+    color: #ccc;
+
+    line-height: 1.6;
+}
+
+.footer-col a {
+
+    display: block;
+
+    color: #ddd;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+
+    color: #2ecc71;
+
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+
+    padding: 20px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+/* DARK MODE */
+
+body.dark .footer {
+
+    background: #0a0a0a;
+}
+
+body.dark .footer-col p,
+body.dark .footer-col a,
+body.dark .footer-bottom {
+
+    color: #d0d0d0;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 700px) {
+
+    .footer-container {
+
+        padding: 20px;
+
+        text-align: center;
+    }
+
+    .footer-col a:hover {
+
+        transform: none;
+    }
+}
+/* ==========================
+   IDIOMA
+========================== */
+
+.idioma-section {
+
+    background: white;
+
+    margin: 20px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.idioma-section h2 {
+
+    margin-bottom: 10px;
+}
+
+.idioma-section p {
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+#idiomaSelect {
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#idiomaSelect:hover {
+
+    transform: scale(1.03);
+}
+
+/* DARK MODE */
+
+body.dark .idioma-section {
+
+    background: #1a1a1a;
+
+    color: white;
+}
+
+body.dark .idioma-section p {
+
+    color: #ccc;
+}
+
+body.dark #idiomaSelect {
+
+    background: #2a2a2a;
+
+    color: white;
+
+    border: 1px solid #444;
+}
+.logo-titulo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    font-size: 52px;
+
+    color: #2ecc71;
+}
+
+.logo-site {
+
+    width: 80px;
+
+    height: 80px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+.hero p {
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: #2ecc71;
+
+    letter-spacing: 0.3px;
+}

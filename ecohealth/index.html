@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - EcoHealth</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <body class="login-page"></body>
+
+<div id="toast"></div>
+
+<section class="login-container">
+
+    <h2>🌱 Login EcoHealth</h2>
+
+    <p class="login-text">
+        Entre com sua conta para acessar o sistema
+    </p>
+
+    <input
+        type="email"
+        id="user"
+        placeholder="Digite seu email"
+        required
+    >
+
+    <input
+        type="password"
+        id="pass"
+        placeholder="Digite sua senha"
+        required
+    >
+
+    <button onclick="login()">
+        Entrar
+    </button>
+
+    <p id="msg"></p>
+
+    <p class="cadastro-link">
+
+        Não possui conta?
+
+        <a href="cadastro.html">
+            Criar conta
+        </a>
+
+    </p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

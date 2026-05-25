@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Problemas Ambientais</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- HERO -->
+
+    <header class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <p>
+            Tecnologia aplicada à saúde pública e conscientização ambiental
+        </p>
+
+    </div>
+
+</header>
+
+<nav>
+    <nav>
+
+        <div class="nav-left">
+    
+            <a href="#"
+               onclick="trocarPagina('home.html')">
+    
+                Mapa
+    
+            </a>
+    
+            <a href="#"
+               onclick="trocarPagina('sobre.html')">
+    
+                Sobre
+    
+            </a>
+    
+            <a href="#"
+               onclick="trocarPagina('problemas.html')">
+    
+                Problemas
+    
+            </a>
+    
+        </div>
+    
+        <div class="nav-right">
+    
+            <button id="themeToggle">
+                🌙
+            </button>
+    
+            <a href="#"
+               onclick="logout()"
+               class="logout-btn">
+    
+                Sair
+    
+            </a>
+    
+        </div>
+    
+    </nav>
+<!-- INTRODUÇÃO -->
+<section class="topo-problemas">
+    <h1>🌍 Saúde Ambiental</h1>
+
+    <div class="card expansivel" onclick="toggleProblemas()">
+        Clique para visualizar os problemas ambientais
+    </div>
+</section>
+
+<!-- CARDS MODERNOS -->
+<section
+    id="problemasConteudo"
+    class="cards-container"
+    style="display: none;"
+>
+
+    <div class="card">
+        <div class="icon">🦟</div>
+
+        <h3>Água Parada</h3>
+
+        <p>
+            O acúmulo de água favorece a proliferação do mosquito da dengue,
+            aumentando o risco de doenças como Zika e Chikungunya.
+        </p>
+
+        <span>Prevenção: eliminar recipientes com água.</span>
+    </div>
+
+    <div class="card">
+        <div class="icon">🚱</div>
+
+        <h3>Água Contaminada</h3>
+
+        <p>
+            Água sem tratamento adequado pode transmitir doenças infecciosas
+            e prejudicar a saúde da população.
+        </p>
+
+        <span>Prevenção: consumir água tratada.</span>
+    </div>
+
+    <div class="card">
+        <div class="icon">🗑️</div>
+
+        <h3>Lixo Irregular</h3>
+
+        <p>
+            O descarte inadequado de resíduos contribui para poluição,
+            proliferação de bactérias e impactos ambientais.
+        </p>
+
+        <span>Prevenção: descarte correto e reciclagem.</span>
+    </div>
+
+    <div class="card">
+        <div class="icon">💨</div>
+
+        <h3>Poluição do Ar</h3>
+
+        <p>
+            A emissão excessiva de poluentes pode causar problemas respiratórios
+            e afetar a qualidade de vida da população.
+        </p>
+
+        <span>Prevenção: reduzir emissão de gases.</span>
+    </div>
+
+    <div class="card">
+        <div class="icon">🔥</div>
+
+        <h3>Queimadas</h3>
+
+        <p>
+            As queimadas provocam destruição ambiental e aumentam os riscos
+            de doenças respiratórias.
+        </p>
+
+        <span>Prevenção: evitar queimadas ilegais.</span>
+    </div>
+
+    <div class="card">
+        <div class="icon">🏭</div>
+
+        <h3>Poluição Industrial</h3>
+
+        <p>
+            Resíduos industriais podem contaminar rios, solos e o ar,
+            causando impactos à saúde pública.
+        </p>
+
+        <span>Prevenção: fiscalização ambiental.</span>
+    </div>
+
+</section>
+
+<!-- AGENTES -->
+<section class="agentes-section">
+
+    <h2>👥 Agentes de Combate às Endemias</h2>
+
+    <div class="card expansivel" onclick="toggleAgentes()">
+        Clique para visualizar as funções dos agentes
+    </div>
+
+    <div id="agentesConteudo" style="display: none;" class="cards-container">
+
+        <div class="card">
+            <div class="icon">🏠</div>
+
+            <h3>Visitas domiciliares</h3>
+
+            <p>
+                Realizam inspeções em residências para identificar focos
+                de doenças e riscos ambientais.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦟</div>
+
+            <h3>Controle de vetores</h3>
+
+            <p>
+                Combatem mosquitos e outros transmissores responsáveis
+                pela disseminação de doenças.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📢</div>
+
+            <h3>Educação da população</h3>
+
+            <p>
+                Orientam moradores sobre prevenção, higiene e cuidados
+                ambientais.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📊</div>
+
+            <h3>Monitoramento</h3>
+
+            <p>
+                Coletam dados e identificam áreas com maiores riscos
+                ambientais e epidemiológicos.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚨</div>
+
+            <h3>Ações preventivas</h3>
+
+            <p>
+                Desenvolvem ações antes do surgimento de surtos
+                para evitar epidemias.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONSCIENTIZAÇÃO -->
+<section class="conscientizacao">
+    <section class="conscientizacao">
+
+        <h2>🌱 Importância da Conscientização</h2>
+    
+        <!-- BOTÃO -->
+    
+        <div
+            class="card expansivel"
+            onclick="toggleConscientizacao()"
+        >
+            Clique para visualizar a importância da conscientização
+        </div>
+    
+        <!-- CONTEÚDO -->
+    
+        <div
+            id="conscientizacaoConteudo"
+            class="cards-container"
+            style="display: none;"
+        >
+    
+            <div class="card">
+    
+                <div class="icon">🌍</div>
+    
+                <h3>Preservação Ambiental</h3>
+    
+                <p>
+                    Pequenas ações da população ajudam na preservação
+                    do meio ambiente e redução da poluição.
+                </p>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="icon">🩺</div>
+    
+                <h3>Saúde Pública</h3>
+    
+                <p>
+                    Ambientes limpos reduzem riscos de doenças,
+                    epidemias e problemas respiratórios.
+                </p>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="icon">♻️</div>
+    
+                <h3>Reciclagem</h3>
+    
+                <p>
+                    O descarte correto de resíduos contribui para
+                    cidades mais sustentáveis.
+                </p>
+    
+            </div>
+    
+            <div class="card">
+    
+                <div class="icon">📚</div>
+    
+                <h3>Educação Ambiental</h3>
+    
+                <p>
+                    Informar a população é essencial para criar
+                    hábitos sustentáveis no dia a dia.
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+
+<script src="script.js"></script>
+
+
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO -->
+
+        <div class="footer-col">
+
+            <h2>🌱 EcoHealth</h2>
+
+            <p>
+                Plataforma voltada à conscientização ambiental
+                e saúde pública através da tecnologia.
+            </p>
+
+        </div>
+
+        <!-- LINKS -->
+
+        <div class="footer-col">
+
+            <h3>Informações</h3>
+
+            <a href="privacidade.html">
+                Política de Privacidade
+            </a>
+
+            <a href="comunidade.html">
+                Política da Comunidade
+            </a>
+
+            <a href="contato.html">
+                Fale Conosco
+            </a>
+
+        </div>
+
+        <!-- REDES -->
+
+        <div class="footer-col">
+
+            <h3>Redes Sociais</h3>
+
+            <a
+                href="https://instagram.com"
+                target="_blank"
+            >
+                📷 Instagram
+            </a>
+
+            <a
+                href="https://facebook.com"
+                target="_blank"
+            >
+                📘 Facebook
+            </a>
+
+            <a
+                href="https://youtube.com"
+                target="_blank"
+            >
+                ▶️ YouTube
+            </a>
+
+            <a
+                href="https://linkedin.com"
+                target="_blank"
+            >
+                💼 LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 EcoHealth • Todos os direitos reservados
+
+    </div>
+
+</footer>
+
+</body>
+</html>
